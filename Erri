@@ -1,0 +1,90 @@
+[1;1H[0JSystem >> Starting up ...
+
+© CorwinDev | 2021 - 2025
+All rights reserved
+
+
+System >> Version 10.0.0 loaded
+
+System >> Starting Shard #1 ...
+
+Unhandled promise rejection: Error [ShardingReadyTimeout]: Shard 0's Client took too long to become ready.
+    at Timeout.onTimeout (/app/node_modules/discord.js/src/sharding/Shard.js:190:16)
+    at listOnTimeout (node:internal/timers:581:17)
+    at process.processTimers (node:internal/timers:519:7) {
+  code: 'ShardingReadyTimeout'
+}
+Database >> MongoDB is connecting...
+System >> Loading commands ...
+
+System >> 42 commands of Command loaded
+System >> 5 commands of ContextMenu loaded
+
+System >> Loading events ...
+
+System >> 5 events of channel loaded
+System >> 7 events of client loaded
+System >> 3 events of emoji loaded
+System >> 3 events of event loaded
+System >> 4 events of giveaway loaded
+System >> 12 events of guild loaded
+System >> 3 events of invite loaded
+System >> 5 events of message loaded
+System >> 6 events of music loaded
+System >> 5 events of role loaded
+System >> 14 events of stats loaded
+System >> 3 events of sticker loaded
+System >> 3 events of thread loaded
+System >> 2 events of voice loaded
+System >> 2 events of warn loaded
+
+System >> Shard #1 is ready!
+Bot >> Started on 2 servers!
+Unhandled promise rejection: MongooseError: Operation `developers.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (/app/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:188:23)
+    at listOnTimeout (node:internal/timers:581:17)
+    at process.processTimers (node:internal/timers:519:7)
+Unhandled promise rejection: MongooseError: Operation `giveaways.find()` buffering timed out after 10000ms
+    at Timeout._onTimeout (/app/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:188:23)
+    at listOnTimeout (node:internal/timers:581:17)
+    at process.processTimers (node:internal/timers:519:7)
+Unhandled promise rejection: MongooseError: Operation `tempbans.find()` buffering timed out after 10000ms
+    at Timeout._onTimeout (/app/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:188:23)
+    at listOnTimeout (node:internal/timers:581:17)
+    at process.processTimers (node:internal/timers:519:7)error
+Warning: Warning: Supplying "fetchReply" for interaction response options is deprecated. Utilize "withResponse" instead or fetch the response after using the method.
+    at ChatInputCommandInteraction.deferReply (/app/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:114:17)
+    at Object.run (/app/src/interactions/Command/bot.js:78:27)
+    at /app/src/events/client/interactionCreate.js:71:29
+    at /app/node_modules/mongoose/lib/model.js:5414:18
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+Unhandled promise rejection: MongoServerError: E11000 duplicate key error collection: test.economies index: userID_1 dup key: { userID: null }
+    at /app/node_modules/mongodb/lib/operations/insert.js:53:33
+    at /app/node_modules/mongodb/lib/cmap/connection_pool.js:333:25
+    at /app/node_modules/mongodb/lib/sdam/server.js:207:17
+    at handleOperationResult (/app/node_modules/mongodb/lib/sdam/server.js:323:20)
+    at Connection.onMessage (/app/node_modules/mongodb/lib/cmap/connection.js:243:9)
+    at MessageStream.<anonymous> (/app/node_modules/mongodb/lib/cmap/connection.js:61:60)
+    at MessageStream.emit (node:events:524:28)
+    at processIncomingData (/app/node_modules/mongodb/lib/cmap/message_stream.js:125:16)
+    at MessageStream._write (/app/node_modules/mongodb/lib/cmap/message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:572:12) {
+  index: 0,
+  code: 11000,
+  keyPattern: { userID: 1 },
+  keyValue: { userID: null },
+  [Symbol(errorLabels)]: Set(0) {}
+}
+Unhandled promise rejection: Error: Cannot find module '/app/src/commands/bot/socials'
+Require stack:
+- /app/src/handlers/functions/functions.js
+- /app/src/bot.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+    at Module._load (node:internal/modules/cjs/loader:1043:27)
+    at Module.require (node:internal/modules/cjs/loader:1298:19)
+    at require (node:internal/modules/helpers:182:18)
+    at client.loadSubcommands (/app/src/handlers/functions/functions.js:94:20)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [ '/app/src/handlers/functions/functions.js', '/app/src/bot.js' ]
+}
